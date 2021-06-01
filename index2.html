@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <style media="screen">
+    @font-face {
+    font-family: 'fugue_headline';
+    src: url("fonts/fugue_headline.woff") format('woff');
+    }
+
+    body{
+      margin: 0 0 0 0;
+      border: 1px solid black;
+      height: 7076px;
+    }
+
+    .wrapper {
+      display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 0em;
+        grid-auto-rows: minmax(7em, auto);
+        grid-template-rows: repeat(8, 7em);
+     }
+    </style>
+
+  </head>
+
+
+  <body>
+    <div class="wrapper"></div>
+
+  </body>
+</html>
