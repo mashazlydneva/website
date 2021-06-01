@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+        PopUpHide();
+      });
+      function PopUpShow(){
+        $("#popup1").show();
+      }
+      function PopUpHide(){
+        $("#popup1").hide();
+      }
+
+      </script>
+    <style media="screen">
+
+    body{
+      margin: 0 0 0 0;
+      border: 1px solid black;
+    }
+
+    @font-face {
+    font-family: 'fugue_headline';
+    src: url("fonts/fugue_headline.woff") format('woff');
+    }
+
+    .wrapper {
+      display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0em;
+        grid-auto-rows: minmax(7em, auto);
+        grid-template-rows: repeat(8, 7em);
+     }
+     .ice {
+       grid-column: 1;
+       grid-row: 2 / 7;
+       border: 1px solid black;
+     }
+     .delivery {
+       grid-column: 1;
+       grid-row: 7;
+       border: 1px solid black;
+     }
+     .delivery:hover{
+       background-color: #3A68EE;
+     }
+     .iceberg {
+       grid-column: 2;
+       grid-row: 2 / 7;
+       border: 1px solid black;
+     }
+     .creation {
+       grid-column: 2;
+       grid-row: 7;
+       border: 1px solid black;
+     }
+     .creation:hover {
+       background-color: #3A68EE;
+     }
+
+     .footer {
+       grid-column: 1 / 3;
+       grid-row: 8;
+       border: 1px solid black;
+       display: flex;
+       justify-content: space-between;
+       padding: 0 2.6em;
+    }
+
+    .menu {
+      grid-column: 1 / 3;
+      grid-row: 1;
+      display: flex;
+      justify-content: space-around;
+    }
+    .uslugi{
+      color: #3A68EE;
+    }
+
+     .b-popup{
+    width:100vw;
+    min-height:100vh;
+    background-color: rgba(0,0,0,0.1);
+    -webki-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: all 2s ease;
+    overflow:hidden;
+    position:fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.b-popup .b-popup-content {
+    width: 100%;
+    /* background: url('images/Group 86.svg'); */
+}
+    </style>
+
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="ice">  </div>
+      <div class="iceberg">  </div>
+      <div class="creation">
+        <h2><a href="javascript:PopUpShow()">СОЗДАНИЕ АЙСБЕРГОВ</a></h2>
+      </div>
+
+      <div class="delivery">
+          <h2><a href="javascript:PopUpShow()">ДОСТАВКА ЛЬДА</a></h2>
+      </div>
+      <div class="b-popup" id="popup1">
+          <a href="javascript:PopUpHide()"><img class="b-popup-content" src="images/Group 86.svg" alt=""></a>
+      </div>
+
+      <div class="footer">
+        <p>Антарктида, ул. Полярная, д. 3 <br> Ежедневно с 10:00 до 20:00</p>
+        <p>tel: + 7 (845) 97 56 34 <br> e-mail: hello@merzlota.com</p>
+      </div>
+
+      <div class="menu">
+        <h3><a href="">О НАС</a></h3>
+        <h3><a href="">ПРОИЗВОДСТВО</a></h3>
+        <h3 class="uslugi"><a href="index.html">УСЛУГИ</a></h3>
+        <h3><a href="">МАГАЗИН</a></h3>
+        <h3><a href="">МЕРОПРИЯТИЯ</a></h3>
+      </div>
+    </div>
+
+  </body>
+</html>
