@@ -1,0 +1,255 @@
+@font-face {
+font-family: 'fugue_headline';
+src: url("fonts/fugue_headline.woff") format('woff');
+}
+@font-face {
+font-family: 'Pragmatica';
+src: url("fonts/Pragmatica.woff") format('woff');
+}
+
+h1 {
+    text-align: center;
+    padding: 0.4em 0 0 0;
+    font-family: 'fugue_headline';
+}
+
+h2 {
+  text-align: center;
+  padding: 0.7em 0 0 0;
+  font-family: 'Pragmatica';
+  font-weight: 330;
+}
+h2:hover {
+  color: white;
+}
+
+h3 {
+    text-align: center;
+    padding: 1.1em 0 0 0;
+    font-family: 'fugue_headline';
+}
+h3:hover{
+  color: #3A68EE;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 30px;
+}
+h1:hover{
+  color: white;
+}
+
+p {
+  font-size: 24px;
+  font-family: 'Pragmatica';
+  font-weight: 330;
+}
+
+body{
+  margin: 0 0 0 0;
+  border: 1px solid black;
+  font-size: 0.9vw;
+}
+.wrapper {
+  display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0em;
+    grid-auto-rows: minmax(7em, auto);
+    grid-template-rows: repeat(8, 7em);
+ }
+  .one {
+    grid-column: 3 / 13;
+    grid-row: 8;
+    border: 1px solid black;
+    overflow: hidden;
+    display: flex;
+  }
+  .two {
+    grid-column: 3 / 7;
+    grid-row: 1;
+    border: 1px solid black;
+  }
+  .two:hover{
+    background-color: #3A68EE;
+  }
+  .about {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    border: 1px solid black;
+  }
+  .about:hover{
+    background-color: #3A68EE;
+  }
+  .shop {
+    grid-column: 1 / 3;
+    grid-row: 6;
+    border: 1px solid black;
+  }
+  .shop:hover{
+    background-color: #3A68EE;
+  }
+  .t-shirt {
+    grid-column: 1 / 3;
+    grid-row: 7 / 9;
+    border: 1px solid black;
+  }
+  .t-shirt img{
+    margin: 1.2em 0 0 .5em;
+    width: 94%;
+  }
+  .seven {
+    grid-column: 7 / 13;
+    grid-row: 5;
+    border: 1px solid black;
+  }
+  .seven:hover{
+    background-color: #3A68EE;
+  }
+  .four {
+    grid-column: 7 / 13;
+    grid-row: 6;
+    border: 1px solid black;
+    overflow: hidden;
+    display: flex;
+  }
+  .five {
+    grid-column: 3 / 7;
+    grid-row: 6;
+    border: 1px solid black;
+  }
+  .five:hover{
+    background-color: #3A68EE;
+  }
+  .six {
+    grid-column: 3 / 13;
+    grid-row: 7;
+    border: 1px solid black;
+    overflow: hidden;
+  }
+  .stroke1 {
+    position: absolute;
+    width: 2118px;
+    animation: stroke1 10s linear infinite;
+  }
+  .stroke1-2{
+    position: absolute;
+    width: 2118px;
+    animation: stroke2 10s linear infinite;
+  }
+
+  .stroke2 {
+    position: absolute;
+    width: 2654px;
+    animation: stroke22 10s linear infinite;
+  }
+  .stroke2-2{
+    position: absolute;
+    width: 2654px;
+    animation: stroke222 10s linear infinite;
+  }
+
+  .mechanism {
+    grid-column: 7 / 13;
+    grid-row: 1 / 5;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .triangles{
+    grid-column: 3 / 7;
+    grid-row: 2 / 6;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start
+  }
+  .merzlota{
+    grid-column: 1 / 3;
+    grid-row: 2 / 6;
+    border: 1px solid black;
+    overflow: hidden;
+  }
+  .merzlota img{
+    width: 101%;
+  }
+
+  .merzlota_img2 {
+    margin-top: 2.2em;
+  }
+
+  .tr2, .tr5, .tr9, .tr12 {
+    position: relative;
+    background: url('../images/Polygon 26.svg') no-repeat;
+  }
+  .tr1, .tr3, .tr6, .tr11 {
+    position: relative;
+    background: url('../images/Polygon 25.svg') no-repeat;
+  }
+
+  .tr4, .tr7, .tr8, .tr10 {
+    position: relative;
+    background: url('../images/Polygon 30.svg') no-repeat;
+  }
+  .tr4, .tr7, .tr8, .tr10, .tr1, .tr3, .tr6, .tr11, .tr2, .tr5, .tr9, .tr12 {
+    width: 9.2em;
+    height: 9.4em;
+  }
+  .bolt1 {
+    position: fixed;
+    margin: 0 0 0 -2em;
+    width: 21%;
+  }
+  .bolt2 {
+    position: fixed;
+    margin: 0 0 0 16em;
+    width: 14%;
+  }
+  .bolt3 {
+    position: fixed;
+    margin: 1em 0 0 29em;
+    width: 13%;
+  }
+  .bolt4 {
+    position: fixed;
+    margin: 2em 0 0 44em;
+    width: 6%;
+  }
+  .bolt5 {
+    position: fixed;
+    margin: 17em 0 0 0em;
+    width: 7%;
+  }
+  .bolt6 {
+    position: fixed;
+    margin: 17em 0 0 7em;
+    width: 10%;
+  }
+  .bolt7 {
+    position: fixed;
+    margin: 10em 0 0 15em;
+    width: 18%;
+  }
+  .bolt8 {
+    position: fixed;
+    margin: 12em 0 0 31em;
+    width: 16%;
+  }
+  .bolt9 {
+    position: fixed;
+    margin: 10em 0 0 45em;
+    width: 9%;
+  }
+  /* .tr1::after {
+    content: '';
+    position: relative;
+    border: 4.6em solid transparent;
+    border-bottom: 9.3em solid black;
+   } */
+   /* .tr1::after {
+     content: '';
+     position: relative;
+     border: 4.1vw solid transparent;
+     border-bottom: 8vw solid black;
+    } */
