@@ -181,18 +181,15 @@ body{
 
   .tr2, .tr5, .tr9, .tr12 {
     position: relative;
-    background: url('../images/Polygon 26.svg') no-repeat;
   }
   .tr1, .tr3, .tr6, .tr11 {
     position: relative;
-    background: url('../images/Polygon 25.svg') no-repeat;
-  }
+    }
 
   .tr4, .tr7, .tr8, .tr10 {
     position: relative;
-    background: url('../images/Polygon 30.svg') no-repeat;
   }
-  .tr4, .tr7, .tr8, .tr10, .tr1, .tr3, .tr6, .tr11, .tr2, .tr5, .tr9, .tr12 {
+  .tr4, .tr7, .tr8, .tr10, .tr1, .tr3, .tr6, .tr11, .tr2, .tr5, .tr9, .tr12, .tr13, .tr14, .tr15, .tr16, .tr17, .tr18, .tr19 {
     width: 9.2em;
     height: 9.4em;
   }
