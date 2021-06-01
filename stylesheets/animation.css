@@ -1,0 +1,16 @@
+@keyframes stroke1 {
+  0% {left: 0px;}
+  100% {left: 2118px;}
+}
+@keyframes stroke2 {
+    0% {left: -2118px;}
+    100% {left: 0px;}
+}
+@keyframes stroke22 {
+  0% {left: 0px;}
+  100% {left: 2654px;}
+}
+@keyframes stroke222 {
+    0% {left: -2660px;}
+    100% {left: 0px;}
+}
