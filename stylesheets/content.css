@@ -52,6 +52,8 @@ body{
   border: 1px solid black;
   font-size: 0.9vw;
 }
+
+
 .wrapper {
   display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -59,6 +61,13 @@ body{
     grid-auto-rows: minmax(7em, auto);
     grid-template-rows: repeat(8, 7em);
  }
+ .wrapper2 {
+   display: grid;
+     grid-template-columns: repeat(12, 1fr);
+     grid-gap: 0em;
+     grid-auto-rows: minmax(7em, auto);
+     grid-template-rows: repeat(7, 7em);
+  }
   .one {
     grid-column: 3 / 13;
     grid-row: 8;
