@@ -14,25 +14,173 @@
     }
 
     body{
-      margin: 0 0 0 0;
-      border: 1px solid black;
-      height: 7076px;
+      /* height: 7076px; */
+    }
+    .menu_fixed {
+      grid-column: 1 / 13;
+      grid-row: 1;
+      display: flex;
+      position: fixed;
+      justify-content: space-around;
+      border: 2px solid black;
+      width: 100%;
+      background-color: white;
     }
 
-    .wrapper {
-      display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-gap: 0em;
-        grid-auto-rows: minmax(7em, auto);
-        grid-template-rows: repeat(8, 7em);
-     }
+    .menu_fixed h3 {
+        text-align: center;
+        padding: 1em 0 1.1em 0;
+   }
+
+   .m_about {
+     color: #3A68EE;
+   }
+
+   .merzlota2 {
+     grid-column: 1 / 5;
+     grid-row: 2 / 9;
+     display: flex;
+     align-items: flex-end;
+     border: 1px solid black;
+   }
+   .merzlota2 img{
+     width: 50.5em;
+   }
+   .merzlota2_text {
+     grid-column: 5 / 12;
+     grid-row: 2 / 9;
+     display: flex;
+     border: 1px solid black;
+   }
+   .merzlota2_arrow {
+     grid-column: 12;
+     grid-row: 2 / 9;
+     display: flex;
+     justify-content: center;
+     border: 1px solid black;
+   }
+   .merzlota2_arrow img{
+     width: 3.5em;
+   }
+
+   .adress{
+     grid-column: 1 / 5;
+     grid-row: 1;
+     border: 1px solid black;
+   }
+   .adress_text {
+     grid-column: 5 / 13;
+     grid-row: 1;
+     border: 1px solid black;
+   }
+   .map {
+     grid-column: 1 / 13;
+     grid-row: 2 / 6;
+     border: 1px solid black;
+   }
+   .contacts {
+     grid-column: 1 / 5;
+     grid-row: 6;
+     border: 1px solid black;
+   }
+   .contacts_text {
+     grid-column: 1 / 5;
+     grid-row: 7;
+     border: 1px solid black;
+   }
+   .question {
+     grid-column: 5 / 13;
+     grid-row: 6 / 8;
+     display: flex;
+     border: 1px solid black;
+   }
+   .holl {
+     grid-column: 5 / 13;
+     grid-row: 1 / 8;
+     display: flex;
+     border: 1px solid black;
+   }
+   .holl_title {
+     grid-column: 1 / 5;
+     grid-row: 1;
+     border: 1px solid black;
+   }
+   .holl_text {
+     grid-column: 1 / 5;
+     grid-row: 1 / 8;
+     border: 1px solid black;
+   }
+   .minus1 {
+     grid-column: 1 / 9;
+     grid-row: 1 / 8;
+     border: 1px solid black;
+   }
+   .minus1_text {
+     grid-column: 9 / 13;
+     grid-row: 1 / 8;
+     border: 1px solid black;
+   }
+
     </style>
 
   </head>
 
 
   <body>
-    <div class="wrapper"></div>
+    <div class="menu_fixed">
+      <h3 class="m_about"><a href="index.html">О НАС</a></h3>
+      <h3><a href="">ПРОИЗВОДСТВО</a></h3>
+      <h3><a href="index3.html">УСЛУГИ</a></h3>
+      <h3><a href="">МАГАЗИН</a></h3>
+      <h3><a href="">МЕРОПРИЯТИЯ</a></h3>
+    </div>
+
+    <section class="first">
+      <div class="wrapper">
+        <div class="merzlota2">
+          <img src="images/Group1.svg" alt="">
+        </div>
+        <div class="merzlota2_text"></div>
+        <div class="merzlota2_arrow">
+          <img src="images/Arrow 5.svg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="second">
+      <div class="wrapper2">
+        <div class="adress"></div>
+        <div class="adress_text"></div>
+        <div class="map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6246419.2871787865!2d-51.60784242032937!3d-73.83230831640721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNzjCsDAzJzU3LjMiUyA0MMKwNTknMDMuNyJX!5e0!3m2!1sru!2sru!4v1622656696374!5m2!1sru!2sru" width="1789" height="451" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+        <div class="contacts"></div>
+        <div class="contacts_text"></div>
+        <div class="question"></div>
+      </div>
+    </section>
+
+    <section class="building">
+      <div class="wrapper2">
+        <div class="holl"></div>
+        <div class="holl_text"></div>
+        <div class="holl_title"></div>
+      </div>
+    </section>
+
+    <section class="building_1">
+      <div class="wrapper2">
+        <div class="minus1"></div>
+        <div class="minus1_text"></div>
+      </div>
+    </section>
+
+    <section class="building_2">
+      <div class="wrapper2">
+        <div class="minus2"></div>
+        <div class="minus2_text"></div>
+      </div>
+    </section>
 
   </body>
 </html>
