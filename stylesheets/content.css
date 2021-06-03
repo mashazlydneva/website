@@ -42,7 +42,7 @@ h1:hover{
 }
 
 p {
-  font-size: 24px;
+  font-size: 1.5em;
   font-family: 'Pragmatica';
   font-weight: 330;
 }
@@ -52,6 +52,7 @@ body{
   border: 1px solid black;
   font-size: 0.9vw;
 }
+
 
 
 .wrapper {
