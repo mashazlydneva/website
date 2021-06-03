@@ -7,6 +7,39 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="stylesheets/style.css">
 
+    <script>
+    var keyBox = document.search.key;
+
+    // обработчик изменения текста
+    function onchange(e){
+        // получаем элемент printBlock
+        var printBlock = document.getElementById("printBlock");
+        // получаем новое значение
+        var val = e.target.value;
+        // установка значения
+        printBlock.textContent = val;
+    }
+    // обработка потери фокуса
+    function onblur(e){
+
+        // получаем его значение и обрезаем все пробелы
+        var text = keyBox.value.trim();
+        if(text==="")
+            keyBox.style.borderColor = "red";
+        else
+            keyBox.style.borderColor = "green";
+    }
+    // получение фокуса
+    function onfocus(e){
+
+        // установка цвета границ поля
+        keyBox.style.borderColor = "blue";
+    }
+    keyBox.addEventListener("change", onchange);
+    keyBox.addEventListener("blur", onblur);
+    keyBox.addEventListener("focus", onfocus);
+    </script>
+
     <style media="screen">
     @font-face {
     font-family: 'fugue_headline';
@@ -15,6 +48,22 @@
 
     body{
       /* height: 7076px; */
+    }
+    input[type="button" i] {
+          border: 2px solid black;
+          border-radius: 0px;
+          background-color: white;
+          font-family: 'Pragmatica';
+          height: 4em;
+          cursor: pointer;
+          width: 4em;
+    }
+    input[type="text" i] {
+          border: 2px solid black;
+          border-radius: 0px;
+          font-family: 'Pragmatica';
+          height: 3.7em;
+          width: 50em;
     }
     .menu_fixed {
       grid-column: 1 / 13;
@@ -51,6 +100,7 @@
      grid-row: 2 / 9;
      display: flex;
      border: 1px solid black;
+     padding: 2em 5em 0 5em;
    }
    .merzlota2_arrow {
      grid-column: 12;
@@ -72,6 +122,7 @@
      grid-column: 5 / 13;
      grid-row: 1;
      border: 1px solid black;
+     padding: 0em 0em 0 5em;
    }
    .map {
      grid-column: 1 / 13;
@@ -87,12 +138,16 @@
      grid-column: 1 / 5;
      grid-row: 7;
      border: 1px solid black;
+     padding: 0em 0em 0 5em;
    }
    .question {
      grid-column: 5 / 13;
      grid-row: 6 / 8;
      display: flex;
      border: 1px solid black;
+     justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
    }
    .holl {
      grid-column: 5 / 13;
@@ -107,8 +162,9 @@
    }
    .holl_text {
      grid-column: 1 / 5;
-     grid-row: 1 / 8;
+     grid-row: 2 / 8;
      border: 1px solid black;
+     padding: 0em 7em 0 5em;
    }
    .minus1 {
      grid-column: 1 / 9;
@@ -120,6 +176,7 @@
      grid-row: 1 / 8;
      border: 1px solid black;
    }
+
 
     </style>
 
@@ -140,7 +197,11 @@
         <div class="merzlota2">
           <img src="images/Group1.svg" alt="">
         </div>
-        <div class="merzlota2_text"></div>
+        <div class="merzlota2_text">
+          <p>Завод «Мерзлота» находится посреди Южного океана и с виду представляет собой среднестатистический айсберг. Но внутри него расположено дейтсвующее предприятие по производству ледников, ловко скрытое от посторонних глаз и не нарушающее природную гармонию. «Мерзлота» не&nbspнаносит вред окружающей среде, так как при производстве льда не&nbspпроисходит химических выбросов. Здание состоит
+из четырёх этажей, не&nbspсчитая холл или надводную часть. На каждом этаже расположены зоны, выполняющие различные функции. Так, на заводе есть как технические помещения, оснащённые необходимым современным оборудованием, так и благоустроенные места
+для комфортного отдыха.</p>
+        </div>
         <div class="merzlota2_arrow">
           <img src="images/Arrow 5.svg" alt="">
         </div>
@@ -149,22 +210,42 @@
 
     <section class="second">
       <div class="wrapper2">
-        <div class="adress"></div>
-        <div class="adress_text"></div>
+        <div class="adress">
+          <h2>АДРЕС</h2>
+        </div>
+        <div class="adress_text">
+          <p>Антарктида, ул. Полярная, д. 3<br>
+Ежедневно с 10:00 до 20:00</p>
+        </div>
         <div class="map">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6246419.2871787865!2d-51.60784242032937!3d-73.83230831640721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNzjCsDAzJzU3LjMiUyA0MMKwNTknMDMuNyJX!5e0!3m2!1sru!2sru!4v1622656696374!5m2!1sru!2sru" width="1789" height="451" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6246419.2871787865!2d-51.60784242032937!3d-73.83230831640721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNzjCsDAzJzU3LjMiUyA0MMKwNTknMDMuNyJX!5e0!3m2!1sru!2sru!4v1622656696374!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
-        <div class="contacts"></div>
-        <div class="contacts_text"></div>
-        <div class="question"></div>
+        <div class="contacts">
+          <h2>КОНТАКТЫ</h2>
+        </div>
+        <div class="contacts_text">
+          <p>tel: + 7 (845) 97 56 34<br>e-mail: hello@merzlota.com</p>
+        </div>
+        <div class="question">
+                <h2>ЗАДАТЬ ВОПРОС</h2>
+                <form name="search">
+                    <input type="text" size="100em" name="key" placeholder="введите вопрос"></input>
+                    <input type="button" name="print" value=">" />
+                </form>
+                <div id="printBlock"></div>
+        </div>
       </div>
     </section>
 
     <section class="building">
       <div class="wrapper2">
-        <div class="holl"></div>
-        <div class="holl_text"></div>
-        <div class="holl_title"></div>
+        <div class="holl">
+          <img src="images/завод15.jpg" alt="">
+        </div>
+        <div class="holl_text">
+          <p>Войдя в айсберг, посетители окажутся в ледяной пещере, потолок которой украшен светящимися сосульками. </p>
+        </div>
+        <div class="holl_title"><h2>ЗДАНИЕ</h2></div>
       </div>
     </section>
 
