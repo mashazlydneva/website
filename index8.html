@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    	<link rel="icon" type="image/png" href="./images/icon.png"/>
+    <script type="text/javascript">
+
+    $(document). ready(function(){
+
+    $(".button").click(function(){
+       $(".button2").css("visibility", "visible")
+        $(".button").css("visibility", "hidden")
+    });
+
+    });
+
+    </script>
+
+
+    <style media="screen">
+    body{
+      margin: 0 0 0 0;
+      border: 1px solid black;
+    }
+
+    @font-face {
+    font-family: 'fugue_headline';
+    src: url("fonts/fugue_headline.woff") format('woff');
+    }
+
+     .top {
+       grid-column: 1 / 13;
+       grid-row: 1;
+       border: 1px solid black;
+       display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 0 2.6em 0 2.6em;
+     }
+     .cross{
+       padding-top: 2em;
+     }
+     .cross img {
+       width: 3em;
+     }
+
+     .tovar {
+       grid-column: 1 / 7;
+       grid-row: 2 / 8;
+       border: 1px solid black;
+       display: flex;
+       overflow: hidden;
+       align-items: flex-end;
+       justify-content: center;
+     }
+     .tovar img {
+       width: 51%;
+     }
+
+     .opisanie {
+       grid-column: 7 / 13;
+       grid-row: 2 / 8;
+       border: 1px solid black;
+       padding: 2em 5em 0 5em;
+     }
+     .button {
+       height: 7em;
+       width: 30em;
+       border: 2px solid black;
+       justify-content: flex-start;
+       display: flex;
+       margin: 23em 0 0 0;
+     }
+
+     .button2 {
+       height: 7em;
+       width: 30em;
+       border: 2px solid black;
+       justify-content: center;
+       display: flex;
+       margin: -7.3em 0 0 0;
+       background: white;
+       visibility: hidden;
+     }
+
+     .button:hover {
+        background-color: #3A68EE;
+        cursor: pointer;
+     }
+     .button h2 {
+       padding-left: 6em;
+     }
+     .price{
+       width: 7em;
+       height: 7em;
+       outline: 2px solid black;
+       background: white;
+     }
+     .price p{
+       padding: 0.6em 0 0 1.4em;
+     }
+
+     .footer{
+     	grid-row: 8;
+     }
+
+
+  </style>
+  <link rel="stylesheet" href="stylesheets/responsive8.css">
+
+  </head>
+
+  <body>
+    <div class="wrapper2">
+      <div class="top">
+        <h2>СЕРИЯ ЛЕКЦИЙ «ПОЧЕМУ ЛЕДНИКИ ТАЮТ?»</h2>
+        <a href="index6.html"><div class="cross">
+              <img src="images/Vector 22.svg" alt="">
+          </div></a>
+      </div>
+
+      <div class="tovar">
+        <img src="images/проектирование копия10.jpg" alt="">
+        <img src="images/проектирование10.jpg" alt="">
+      </div>
+
+      <div class="opisanie">
+       <p>С 19 по 21 января прошла серия лекция
+на тему глобального потепления, в которой
+в качестве спикеров участвовали известные эко-активистки и эксперты: Грета Тунберг, Лорен Сингер и Луиза Нойбауэр</p>
+      </div>
+
+
+      <div class="footer">
+        <p>Антарктида, ул. Полярная, д. 3 <br> Ежедневно с 10:00 до 20:00</p>
+        <p>tel: + 7 (845) 97 56 34 <br> e-mail: hello@merzlota.com</p>
+      </div>
+
+    </div>
+
+  </body>
+</html>
