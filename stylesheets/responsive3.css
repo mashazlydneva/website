@@ -1,0 +1,68 @@
+@media all and (min-width: 320px) and (max-width: 1023px) {
+
+  .wrapper {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(18, 8em);
+   }
+
+.footer {
+  grid-row: 18;
+}
+.ice {
+  grid-column: 1 / 2;
+  grid-row: 2 / 10;
+  flex-direction: column;
+}
+ .ice1, .ice2, .ice3, .ice4, .ice5, .ice6, .ice7, .ice8, .ice9, .ice10, .ice11, .ice12, .ice13, .ice14, .ice15 {
+  width: 22.2em;
+  height: 18.6em;
+}
+
+
+.tr4, .tr7, .tr8, .tr10, .tr1, .tr3, .tr6, .tr11, .tr2, .tr5, .tr9, .tr12, .tr13, .tr14, .tr15, .tr16, .tr17, .tr18, .tr19 {
+  width: 21.8em;
+  height: 29.6em;
+}
+.tr11, .tr12, .tr13, .tr14, .tr15 {
+  display: none;
+}
+.delivery {
+  grid-column: 1;
+  grid-row: 9;
+}
+.iceberg {
+  grid-column: 1 / 2;
+  grid-row: 10 / 18;
+}
+.creation {
+  grid-column: 1;
+  grid-row: 17;
+}
+
+.others {
+    display: none;
+  }
+  .burger {
+    display: block;
+    /* padding: 1.6em 0em 0 10em; */
+          margin-right: 4em;
+  }
+  .cross {
+        margin: 0.5em 0em 0 92em;
+  }
+  .burger img, .cross img {
+    width: 6em;
+  }
+  .menu_fixed {
+    justify-content: space-between;
+        align-items: center;
+        height: 8em;
+  }
+  .menu_iphone h3 {
+    font-size: 5em;
+  }
+  .menu_iphone {
+       padding-top: 7.4em;
+  }
+
+}
