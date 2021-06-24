@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="stylesheets/style.css">
+
+  <script>
+		$(document). ready(function(){
+			$(".burger").click(function(){
+				 $(".menu_iphone").css("visibility", "visible")
+				 $(".cross").css("display", "block")
+					$(".burger, .others, .m_events").css("visibility", "hidden")
+			 });
+
+			 });
+  </script>
+
+	<style media="screen">
+	@font-face {
+	font-family: 'fugue_headline';
+	src: url("fonts/fugue_headline.woff") format('woff');
+	}
+
+.for_posters{
+	  /* grid-template-rows: repeat(8, 5em); */
+		  grid-template-rows: repeat(6, 7em);
+}
+ .m_events {
+	 color: #3A68EE;
+ }
+
+.events1 {
+	height: 6em;
+	width: 100%;
+	margin-top: 7em;
+}
+.events2 {
+	height: 6em;
+	width: 100%;
+
+}
+.events3 {
+	height: 7em;
+	width: 100%;
+
+}
+
+ .news1{
+	 grid-column: 1 / 13;
+	 grid-row: 1 / 5;
+	 display: flex;
+	 justify-content: space-evenly;
+	 margin-top: 4em;
+ }
+
+.news p {
+	font-size: 1em;
+}
+ .news2{
+	 display: flex;
+   grid-column: 1 / 13;
+	 grid-row: 1 / 5;
+	 justify-content: space-evenly;
+	 margin-top: 2em;
+ }
+ .posters{
+ 	width: 20em;
+	  height: 140%;
+	outline: 2px solid black;
+ }
+ .poster1, .poster2, .poster3, .poster4, .poster5, .poster6, .poster7, .poster8 {
+	 display: flex;
+   flex-direction: column;
+ }
+ .merch1_text, .merch2_text, .merch3_text {
+   outline: 2px solid black;
+	 justify-content: space-around;
+	 display: flex;
+	 cursor: pointer;
+
+ }
+ .merch1_text:hover, .merch2_text:hover, .merch3_text:hover, .book_price:hover {
+ 	background-color: #3A68EE;
+ }
+
+ .merch1_text img, .merch2_text img, .merch3_text img, .book_price img {
+   width: 3em;
+ }
+ .burger, .cross {
+   display: none;
+ }
+
+ .menu_fixed h3 {
+   margin-left: 1em;
+ }
+
+	</style>
+	<link rel="stylesheet" href="stylesheets/responsive6.css">
+
+</head>
+
+<body>
+
+	<div class="menu_fixed">
+		<h3 class="others"><a href="index2.html">О НАС</a></h3>
+		<h3 class="others"><a href="index4.html">ПРОИЗВОДСТВО</a></h3>
+		<h3 class="others"><a href="index3.html">УСЛУГИ</a></h3>
+		<h3 class="others"><a href="index5.html">МАГАЗИН</a></h3>
+		<h3 class="m_events"><a href="index.html">МЕРОПРИЯТИЯ</a></h3>
+		        <a href="index6.html"><div class="cross">
+		              <img src="images/Vector 22.svg" alt="">
+		          </div></a>
+		        <div class="burger">
+		          <img src="images/Group 133.svg" alt="">
+		        </div>
+	</div>
+	<div class="menu_iphone">
+		<div class="rectangle1">
+			<h3 class="i_about"><a href="index2.html">О НАС</a></h3>
+		</div>
+		<div class="rectangle2">
+			<h3 class="i_creation"><a href="index4.html">ПРОИЗВОДСТВО</a></h3>
+		</div>
+		<div class="rectangle3">
+			<h3 class="i_uslugi"><a href="index3.html">УСЛУГИ</a></h3>
+		</div>
+		<div class="rectangle4">
+			<h3 class="i_shop"><a href="index5.html">МАГАЗИН</a></h3>
+		</div>
+		<div class="rectangle5">
+			<h3 class="i_news"><a href="index6.html">МЕРОПРИЯТИЯ</a></h3>
+		</div>
+	</div>
+
+			<div class="one events1">
+			<img class="stroke2" src="images/паблик-ток на тему глобального потепления.svg" alt="">
+			<img class="stroke2-2" src="images/паблик-ток на тему глобального потепления.svg" alt="">
+			</div>
+
+			<div class="four events2">
+				<img class="stroke3" src="images/субботник по сбору снега.svg" alt="">
+				<img class="stroke3-2" src="images/субботник по сбору снега.svg" alt="">
+			</div>
+
+			<div class="six events3">
+				<img class="stroke1" src="images/серия лекций «почему ледники тают_».svg" alt="">
+				<img class="stroke1-2" src="images/серия лекций «почему ледники тают_».svg" alt="">
+			</div>
+
+<section class="news">
+	<div class="wrapper4">
+		<div class="news1">
+			<div class="poster1">
+			<img class="posters" src="images/отель копия 2 1.jpg" alt="">
+					<div class="merch1_text">
+						<p><a href="javascript:PopUpShow()"> 23.01.21 <br> открытие отеля <br> в Антарктиде </a></p>
+						<img src="images/Group 106.svg" alt="">
+					</div>
+			</div>
+			<div class="poster2">
+			<img class="posters"  src="images/паблик-ток копия 2 1.jpg" alt="">
+			<div class="merch2_text">
+			 <p><a href="javascript:PopUpShow()">	23.02.21 <br> паблик-ток на тему <br> глобального потепления </a></p>
+				<img src="images/Group 106.svg" alt="">
+			</div>
+			</div>
+			<div class="poster3">
+			<img  class="posters" src="images/Artboard 1.jpg" alt="">
+			 <div class="merch3_text">
+				<p>23.01.21 <br> субботник <br> по сбору снега</p>
+				<img src="images/Group 106.svg" alt="">
+			 </div>
+			 </div>
+			 <div class="poster4">
+ 			<img  class="posters" src="images/проектирование копия4.jpg" alt="">
+ 			 <div class="merch3_text">
+ 				<p>23.01.21 <br> Экскурсия «путешествие <br> в Мерзлоту»</p>
+ 				<img src="images/Group 106.svg" alt="">
+ 			 </div>
+ 			 </div>
+		</div>
+	</div>
+
+	<div class="wrapper2 for_posters">
+		<div class="news2">
+			<div class="poster5">
+			<img  class="posters" src="images/проектирование копия10.jpg" alt="">
+					<div class="merch1_text">
+						<p>19.01.21 <br> серия лекций <br> «почему ледники тают?» </p>
+						<img src="images/Group 106.svg" alt="">
+					</div>
+			</div>
+			<div class="poster6">
+			<img  class="posters" src="images/new year копия 3 1.jpg" alt="">
+			<div class="merch2_text">
+				<p>31.12.20 <br> вечеринка в честь <br> нового года в&nbspМерзлоте</p>
+				<img src="images/Group 106.svg" alt="">
+			</div>
+			</div>
+			<div class="poster7">
+			<img  class="posters" src="images/горки 1.jpg" alt="">
+			 <div class="merch3_text">
+				<p>15.12.20 <br> открытие парка <br> «ледяные горки»</p>
+				<img src="images/Group 106.svg" alt="">
+			 </div>
+		</div>
+		<div class="poster8">
+		<img  class="posters" src="images/чистый лед 1.jpg" alt="">
+		 <div class="merch3_text">
+			<p>25.11.20 <br> открытие <br> магазина льда</p>
+			<img src="images/Group 106.svg" alt="">
+		 </div>
+	</div>
+	</div>
+
+</section>
+<div class="footer">
+	<p>Антарктида, ул. Полярная, д. 3 <br> Ежедневно с 10:00 до 20:00</p>
+	<p>tel: + 7 (845) 97 56 34 <br> e-mail: hello@merzlota.com</p>
+</div>
+</div>
+
+
+</body>
+</html>

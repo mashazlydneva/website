@@ -1,0 +1,291 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="stylesheets/style.css">
+
+	<script type="text/javascript">
+
+	$(document). ready(function(){
+		$(".burger").click(function(){
+			 $(".menu_iphone").css("visibility", "visible")
+			 $(".cross").css("display", "block")
+				$(".burger, .others, .m_shop").css("visibility", "hidden")
+		 });
+
+		 });
+		$(document).ready(function(){
+			PopUpHide();
+		});
+		function PopUpShow(){
+			$("#popup1").show();
+		}
+		function PopUpHide(){
+			$("#popup1").hide();
+		}
+	</script>
+
+	<style media="screen">
+	@font-face {
+	font-family: 'fugue_headline';
+	src: url("fonts/fugue_headline.woff") format('woff');
+	}
+
+
+
+ .m_shop {
+	 color: #3A68EE;
+ }
+
+ .book_price{
+	grid-column: 1 / 13;
+ 	grid-row: 8;
+ 	border: 2px solid black;
+	    padding: 0em 5em 0 5em;
+			justify-content: space-between;
+			display: flex;
+ }
+ .merch{
+ 	margin-top: 4em
+ }
+
+ .goods1{
+	 grid-column: 1 / 13;
+	 grid-row: 1 / 7;
+	 display: flex;
+	 justify-content: space-evenly;
+	 overflow: hidden;
+ }
+
+ .goods2{
+	 display: flex;
+   grid-column: 1 / 13;
+	 grid-row: 1 / 7;
+	 justify-content: space-evenly;
+	 overflow: hidden;
+ }
+ .photos{
+ 	width: 30em;
+	border: 2px solid black;
+ }
+ .merch1, .merch2, .merch3, .merch4, .merch5, .merch6 {
+	 display: flex;
+     flex-direction: column;
+ }
+ .merch1_text, .merch2_text, .merch3_text {
+   border: 2px solid black;
+	 justify-content: space-around;
+	 display: flex;
+	 cursor: pointer;
+ }
+ .merch1_text:hover, .merch2_text:hover, .merch3_text:hover, .book_price:hover {
+ 	background-color: #3A68EE;
+ }
+
+ .merch1_text img, .merch2_text img, .merch3_text img, .book_price img {
+   width: 3em;
+ }
+ .merch2_text{
+   border: 2px solid black;
+ }
+ .merch3_text{
+   border: 2px solid black;
+ }
+ /* .footer{
+ 	grid-row: 7;
+ } */
+
+ .b-popup{
+		width:100vw;
+		min-height:100vh;
+		background-color: rgba(0,0,0,0.1);
+		-webki-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+		transition: all 2s ease;
+		overflow:hidden;
+		position:fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		}
+		.b-popup .b-popup-content {
+		width: 100%;
+		/* background: url('images/Group 86.svg'); */
+		}
+
+		.burger, .cross {
+		  display: none;
+		}
+
+		.menu_fixed h3 {
+		  margin-left: 1em;
+		}
+
+	</style>
+	<link rel="stylesheet" href="stylesheets/responsive5.css">
+
+</head>
+
+<body>
+
+	<div class="menu_fixed">
+		<h3 class="others"><a href="index2.html">О НАС</a></h3>
+		<h3 class="others"><a href="index4.html">ПРОИЗВОДСТВО</a></h3>
+		<h3 class="others"><a href="index3.html">УСЛУГИ</a></h3>
+		<h3 class="m_shop"><a href="index.html">МАГАЗИН</a></h3>
+		<h3 class="others"><a href="index6.html">МЕРОПРИЯТИЯ</a></h3>
+		<a href="index5.html"><div class="cross">
+					<img src="images/Vector 22.svg" alt="">
+			</div></a>
+		<div class="burger">
+			<img src="images/Group 133.svg" alt="">
+		</div>
+	</div>
+
+	<div class="menu_iphone">
+		<div class="rectangle1">
+			<h3 class="i_about"><a href="index2.html">О НАС</a></h3>
+		</div>
+		<div class="rectangle2">
+			<h3 class="i_creation"><a href="index4.html">ПРОИЗВОДСТВО</a></h3>
+		</div>
+		<div class="rectangle3">
+			<h3 class="i_uslugi"><a href="index3.html">УСЛУГИ</a></h3>
+		</div>
+		<div class="rectangle4">
+			<h3 class="i_shop"><a href="index5.html">МАГАЗИН</a></h3>
+		</div>
+		<div class="rectangle5">
+			<h3 class="i_news"><a href="index6.html">МЕРОПРИЯТИЯ</a></h3>
+		</div>
+	</div>
+
+<section class="book">
+	<div class="wrapper2 shoppage2">
+		<div class="slider">
+			<a class="prev" onclick="minusSlide()">&#10094;</a>
+		  	<div class="item">
+		        <img src="images/Frame 30.jpg" alt="Первый слайд">
+		    </div>
+
+		    <div class="item">
+		        <img src="images/Frame 28.jpg" alt="Второй слайд">
+		    </div>
+
+				<div class="item">
+						<img src="images/Frame 29.jpg" alt="Второй слайд">
+				</div>
+
+		    <div class="item">
+		        <img src="images/Frame 31.jpg" alt="Третий слайд">
+		    </div>
+
+				<div class="item">
+		        <img src="images/Frame 34.jpg" alt="Третий слайд">
+		    </div>
+
+				<div class="item">
+		        <img src="images/Frame 33.jpg" alt="Третий слайд">
+		    </div>
+
+				<div class="item">
+		        <img src="images/Frame 32.jpg" alt="Третий слайд">
+		    </div>
+
+				<div class="item">
+						<img src="images/Frame 35.jpg" alt="Третий слайд">
+				</div>
+
+				<div class="item">
+						<img src="images/Frame 37.jpg" alt="Третий слайд">
+				</div>
+
+				<div class="item">
+						<img src="images/Frame 36.jpg" alt="Третий слайд">
+				</div>
+
+				<div class="item">
+						<img src="images/Frame 38.jpg" alt="Третий слайд">
+				</div>
+
+		  <a class="next" onclick="plusSlide()">&#10095;</a>
+
+		</div>
+
+		<a class="book_price" href="https://ru.calameo.com/read/0065977039b8544a03253">
+			<p>печатное издание <br> 20$</p>
+			<img src="images/Group 106.svg" alt="">
+		</a>
+	</div>
+</section>
+
+<section class="merch">
+	<div class="wrapper4">
+		<div class="goods1">
+				<div class="merch1">
+				<img class="photos" src="images/проектирование17 2.jpg" alt="">
+						<a href="index7.html"><div class="merch1_text" >
+							<p>тканевая сумка <br> 15$ </p>
+							<img src="images/Group 106.svg" alt="">
+						</div>
+						</a>
+			  </div>
+				<div class="merch2">
+				<img class="photos" src="images/проектирование13 1.jpg" alt="">
+				<div class="merch2_text">
+				 <p><a href="javascript:PopUpShow()">	канцелярия <br> от 4$ </a></p>
+					<img src="images/Group 106.svg" alt="">
+				</div>
+			  </div>
+				<div class="merch3">
+				<img class="photos" src="images/проектирование17 1.jpg" alt="">
+				 <div class="merch3_text">
+				 	<p>футболка <br> 17$</p>
+					<img src="images/Group 106.svg" alt="">
+				 </div>
+			   </div>
+     </div>
+	</div>
+
+	<div class="wrapper2 shoppage">
+		<div class="goods2">
+			<div class="merch4">
+			<img class="photos" src="images/проектирование15 2.jpg" alt="">
+					<div class="merch1_text">
+						<p>жилет <br> 15$ </p>
+						<img src="images/Group 106.svg" alt="">
+					</div>
+			</div>
+			<div class="merch5">
+			<img class="photos" src="images/проектирование19 1.jpg" alt="">
+			<div class="merch2_text">
+				<p>плакаты А3 <br> 10$</p>
+				<img src="images/Group 106.svg" alt="">
+			</div>
+			</div>
+			<div class="merch6">
+			<img class="photos" src="images/проектирование15 1.jpg" alt="">
+			 <div class="merch3_text">
+				<p>каска <br> 12$</p>
+				<img src="images/Group 106.svg" alt="">
+			 </div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<p>Антарктида, ул. Полярная, д. 3 <br> Ежедневно с 10:00 до 20:00</p>
+		<p>tel: + 7 (845) 97 56 34 <br> e-mail: hello@merzlota.com</p>
+	</div>
+</section>
+
+<div class="b-popup" id="popup1">
+		<a href="javascript:PopUpHide()"><img class="b-popup-content" src="images/Group 86.svg" alt=""></a>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <script>
+
+      $(document). ready(function(){
+        $(".burger").click(function(){
+           $(".menu_iphone").css("visibility", "visible")
+           $(".cross").css("display", "block")
+            $(".burger, .others, .m_about").css("visibility", "hidden")
+         });
+
+         });
+
+    function PopUpShow(){
+      $("#popup1").show();
+    }
+    function PopUpHide(){
+      $("#popup1").hide();
+    }
+
+    $(document).ready(function(){
+      PopUpHide();
+    });
+
+    var keyBox = document.search.key;
+
+    // обработчик изменения текста
+    function onchange(e){
+        // получаем элемент printBlock
+        var printBlock = document.getElementById("printBlock");
+        // получаем новое значение
+        var val = e.target.value;
+        // установка значения
+        printBlock.textContent = val;
+    }
+    // обработка потери фокуса
+    function onblur(e){
+
+        // получаем его значение и обрезаем все пробелы
+        var text = keyBox.value.trim();
+        if(text==="")
+            keyBox.style.borderColor = "red";
+        else
+            keyBox.style.borderColor = "green";
+    }
+    // получение фокуса
+    function onfocus(e){
+
+        // установка цвета границ поля
+        keyBox.style.borderColor = "blue";
+    }
+    keyBox.addEventListener("change", onchange);
+    keyBox.addEventListener("blur", onblur);
+    keyBox.addEventListener("focus", onfocus);
+
+
+    </script>
+
+    <style media="screen">
+    @font-face {
+    font-family: 'fugue_headline';
+    src: url("fonts/fugue_headline.woff") format('woff');
+    }
+
+    body{
+      /* height: 7076px; */
+    }
+    input[type="button" i] {
+          border: 2px solid black;
+          border-radius: 0px;
+          background-color: white;
+          font-family: 'Pragmatica';
+          cursor: pointer;
+          font-size: 2em;
+          width: 2.3em;
+          height: 2.35em;
+    }
+    input[type="text" i] {
+          border: 2px solid black;
+          border-radius: 0px;
+          font-family: 'Pragmatica';
+          font-size: 1.5em;
+          font-weight: 300;
+          width: 20em;
+          height: 3em;
+          padding: 0em 0 0 1em;
+    }
+
+   .m_about {
+     color: #3A68EE;
+   }
+
+   .merzlota2 {
+     grid-column: 1 / 5;
+     grid-row: 2 / 9;
+     display: flex;
+     align-items: flex-end;
+     border: 1px solid black;
+   }
+   .merzlota2 img{
+     width: 100%;
+   }
+   .merzlota2_text {
+     grid-column: 5 / 12;
+     grid-row: 2 / 9;
+     display: flex;
+     border: 1px solid black;
+     padding: 2em 5em 0 5em;
+   }
+   .merzlota2_arrow {
+     grid-column: 12;
+     grid-row: 2 / 9;
+     display: flex;
+     justify-content: center;
+     border: 1px solid black;
+   }
+   .merzlota2_arrow img{
+     width: 3.5em;
+   }
+
+   .adress{
+     grid-column: 1 / 5;
+     grid-row: 1;
+     border: 1px solid black;
+   }
+   .adress_text {
+     grid-column: 5 / 13;
+     grid-row: 1;
+     border: 1px solid black;
+     padding: 0em 0em 0 5em;
+   }
+   .map {
+     grid-column: 1 / 13;
+     grid-row: 2 / 6;
+     border: 1px solid black;
+   }
+   .contacts {
+     grid-column: 1 / 5;
+     grid-row: 6;
+     border: 1px solid black;
+   }
+   .contacts_text {
+     grid-column: 1 / 5;
+     grid-row: 7;
+     border: 1px solid black;
+     padding: 0em 0em 0 5em;
+   }
+   .question {
+     grid-column: 5 / 13;
+     grid-row: 6 / 8;
+     display: flex;
+     border: 1px solid black;
+     justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+   }
+   .holl {
+     grid-column: 5 / 13;
+     grid-row: 1 / 8;
+     display: flex;
+     border: 1px solid black;
+     overflow: hidden;
+   }
+   .holl_title {
+     grid-column: 1 / 5;
+     grid-row: 1;
+     border: 1px solid black;
+   }
+   .holl_text {
+     grid-column: 1 / 5;
+     grid-row: 2 / 8;
+     border: 1px solid black;
+     padding: 2em 5em 2em 5em;
+     display: flex;
+     justify-content: space-between;
+     flex-direction: column;
+   }
+   .minus1 {
+     grid-column: 1 / 9;
+     grid-row: 1 / 8;
+     border: 1px solid black;
+     display: flex;
+     overflow: hidden;
+   }
+   .minus1_text {
+     grid-column: 9 / 13;
+     grid-row: 1 / 8;
+     border: 1px solid black;
+     padding: 2em 5em 2em 5em;
+     display: flex;
+     justify-content: space-between;
+     flex-direction: column;
+   }
+   .minus2_title {
+     grid-column: 1 / 7;
+     grid-row: 1 / 4;
+     border: 1px solid black;
+     overflow: hidden;
+     padding: 2em 0em 0 5em;
+   }
+   .minus2 {
+     grid-column: 1 / 12;
+     grid-row: 4 / 11;
+     border: 1px solid black;
+     display: flex;
+     overflow: hidden;
+   }
+   .minus2 img{
+     width: 100%;
+   }
+   .minus2_text {
+     grid-column: 7 / 13;
+     grid-row: 1 / 4;
+     border: 1px solid black;
+     overflow: hidden;
+     padding: 2em 10em 0 5em;
+     display: flex;
+     justify-content: space-between;
+   }
+   .minus2_arrow {
+     grid-column: 12;
+     grid-row: 4 / 11;
+     display: flex;
+     justify-content: center;
+     border: 1px solid black;
+   }
+   .minus2_arrow img{
+     width: 3.5em;
+   }
+
+   .minus3 {
+     grid-column: 5 / 13;
+     grid-row: 2 / 8;
+     border: 1px solid black;
+     display: flex;
+     overflow: hidden;
+   }
+   .decor {
+     grid-column: 1 / 13;
+     grid-row: 1;
+     border: 1px solid black;
+     display: flex;
+     overflow: hidden;
+     padding: 0 0 0 10em;
+   }
+   .decor2 {
+     grid-column: 1 / 13;
+     grid-row: 1;
+     display: flex;
+     overflow: hidden;
+     padding: 0 31em 0 0em;
+     transform: rotate(180deg);
+   }
+   .minus3_text{
+     grid-column: 1 / 5;
+     grid-row: 2 / 8;
+     border: 1px solid black;
+     display: flex;
+     overflow: hidden;
+     padding: 2em 5em 1em 5em;
+     justify-content: space-between;
+     flex-direction: column;
+   }
+   .minus4_title {
+     grid-column: 5 / 13;
+     grid-row: 1 / 4;
+     border: 1px solid black;
+     overflow: hidden;
+     padding: 3em 0em 0 44em;
+   }
+   .minus4 {
+     grid-column: 1 / 13;
+     grid-row: 4 / 11;
+     border: 1px solid black;
+     display: flex;
+     overflow: hidden;
+   }
+   .minus4 img {
+     width: 112em;
+     height: 60em;
+   }
+
+   .minus4_text {
+     grid-column: 1 / 5;
+     grid-row: 1 / 4;
+     border: 1px solid black;
+     overflow: hidden;
+     padding: 2em 10em 0 5em;
+     display: flex;
+     justify-content: space-between;
+   }
+
+   .zavod {
+     grid-column: 1 / 13;
+     grid-row: 1 / 7;
+     border: 1px solid black;
+     overflow: hidden;
+     display: block;
+     align-items: flex-end;
+     padding-top: 1em;
+     position: relative;
+   }
+
+   .webposter_title{
+     grid-column: 1 / 13;
+     grid-row: 7;
+     border: 1px solid black;
+     padding: 0em 10em 0 5em;
+     display: flex;
+     justify-content: space-between
+   }
+   .webposter_title:hover{
+     background-color: #3A68EE;
+   }
+
+   .webposter_title img {
+    width: 52em;
+   }
+   .zavod1 {
+     position: absolute;
+     width: 110em;
+     animation: zavod1 20s linear infinite;
+   }
+
+   .zavod2 {
+     position: absolute;
+     width: 110em;
+     animation: zavod2 20s linear infinite;
+   }
+
+   .b-popup {
+  width:100vw;
+  min-height:100vh;
+  background-color: rgba(0,0,0,0.1);
+  -webki-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: all 2s ease;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.b-popup .b-popup-content {
+  width: 100%;
+}
+.burger, .cross {
+  display: none;
+}
+
+.menu_fixed h3 {
+  margin-left: 1em;
+}
+
+    </style>
+    <link rel="stylesheet" href="stylesheets/responsive2.css">
+
+  </head>
+
+
+  <body>
+    <div class="menu_fixed">
+      <h3 class="m_about"><a href="index.html">О НАС</a></h3>
+      <h3 class="others"><a href="index4.html">ПРОИЗВОДСТВО</a></h3>
+      <h3 class="others"><a href="index3.html">УСЛУГИ</a></h3>
+      <h3 class="others"><a href="index5.html">МАГАЗИН</a></h3>
+      <h3 class="others"><a href="index6.html">МЕРОПРИЯТИЯ</a></h3>
+      <a href="index2.html"><div class="cross">
+            <img src="images/Vector 22.svg" alt="">
+        </div></a>
+      <div class="burger">
+        <img src="images/Group 133.svg" alt="">
+      </div>
+    </div>
+
+    <div class="menu_iphone">
+      <div class="rectangle1">
+        <h3 class="i_about"><a href="index2.html">О НАС</a></h3>
+      </div>
+      <div class="rectangle2">
+        <h3 class="i_creation"><a href="index4.html">ПРОИЗВОДСТВО</a></h3>
+      </div>
+      <div class="rectangle3">
+        <h3 class="i_uslugi"><a href="index3.html">УСЛУГИ</a></h3>
+      </div>
+      <div class="rectangle4">
+        <h3 class="i_shop"><a href="index5.html">МАГАЗИН</a></h3>
+      </div>
+      <div class="rectangle5">
+        <h3 class="i_news"><a href="index6.html">МЕРОПРИЯТИЯ</a></h3>
+      </div>
+    </div>
+
+    <section class="first">
+      <div class="wrapper">
+        <div class="merzlota2">
+          <img src="images/Group1.svg" alt="">
+        </div>
+        <div class="merzlota2_text">
+          <p>Завод «Мерзлота» находится посреди Южного океана и с виду представляет собой среднестатистический айсберг. Но внутри него расположено дейтсвующее предприятие по производству ледников, ловко скрытое от посторонних глаз и не нарушающее природную гармонию. «Мерзлота» не&nbspнаносит вред окружающей среде, так как при производстве льда не&nbspпроисходит химических выбросов. Здание состоит
+из четырёх этажей, не&nbspсчитая холл или надводную часть. На каждом этаже расположены зоны, выполняющие различные функции. Так, на заводе есть как технические помещения, оснащённые необходимым современным оборудованием, так и благоустроенные места
+для комфортного отдыха.</p>
+        </div>
+        <div class="merzlota2_arrow">
+          <img src="images/Arrow 5.svg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="second">
+      <div class="wrapper2">
+        <div class="adress">
+          <h2>АДРЕС</h2>
+        </div>
+        <div class="adress_text">
+          <p>Антарктида, ул. Полярная, д. 3<br>Ежедневно с 10:00 до 20:00</p>
+        </div>
+        <div class="map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6246419.2871787865!2d-51.60784242032937!3d-73.83230831640721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNzjCsDAzJzU3LjMiUyA0MMKwNTknMDMuNyJX!5e0!3m2!1sru!2sru!4v1622656696374!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+        <div class="contacts">
+          <h2>КОНТАКТЫ</h2>
+        </div>
+        <div class="contacts_text">
+          <p>tel: + 7 (845) 97 56 34<br>e-mail: hello@merzlota.com</p>
+        </div>
+        <div class="question">
+                <h2>ЗАДАТЬ ВОПРОС</h2>
+                <form name="search">
+                    <input type="text" name="key" placeholder="введите вопрос"></input>
+                    <a href="javascript:PopUpShow()"><input type="button" name="print" value=">" /></a>
+                </form>
+                <div id="printBlock"></div>
+        </div>
+
+        <div class="b-popup" id="popup1">
+            <a href="javascript:PopUpHide()"><img class="b-popup-content" src="images/Group 88.svg" alt=""></a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="building">
+      <div class="wrapper2">
+        <div class="holl">
+          <img src="images/завод15.jpg" alt="">
+        </div>
+        <div class="holl_text">
+          <p>Войдя в айсберг, посетители окажутся в ледяной пещере, потолок которой украшен светящимися сосульками. </p>
+          <div class="floors">
+            <img class="holl_img" src="images/0.png" alt="">
+            <h2>ХОЛЛ</h2>
+          </div>
+        </div>
+        <div class="holl_title"><h2>ЗДАНИЕ</h2></div>
+      </div>
+    </section>
+
+    <section class="building_1">
+      <div class="wrapper2">
+        <div class="minus1">
+          <img src="images/завод50.jpg" alt="">
+        </div>
+        <div class="minus1_text">
+          <p>На минус первом этаже располагается самый важный технический отсек с&nbspпанелью управления, с&nbspпомощью которой осуществляется контроль над&nbspцелым заводом.</p>
+          <div class="floors">
+            <img class="minus1_img" src="images/-1.png" alt="">
+            <h2>ЭТАЖ</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="building_2">
+      <div class="wrapper3">
+        <div class="minus2">
+          <img src="images/завод22.jpg" alt="">
+        </div>
+        <div class="minus2_title">
+          <div class="floors">
+            <img class="minus2_img" src="images/-2.png" alt="">
+            <h2>ЭТАЖ</h2>
+          </div>
+        </div>
+        <div class="minus2_arrow">
+          <img src="images/Arrow 5.svg" alt="">
+        </div>
+        <div class="minus2_text">
+          <p>На минус втором этаже расположено хранилище льда, в&nbspкоторое выгружаются обработанные айсберги для&nbspдальнейшей транспортировки в океан.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="building_3">
+      <div class="wrapper2">
+        <div class="decor">
+          <img src="images/Polygon 25.svg" alt="">
+          <img src="images/Polygon 26.svg" alt="">
+          <img src="images/Polygon 25.svg" alt="">
+          <img src="images/Polygon 30.svg" alt="">
+          <img src="images/Polygon 26.svg" alt="">
+          <div class="decor2">
+            <img src="images/Polygon 30.svg" alt="">
+            <img src="images/Polygon 25.svg" alt="">
+            <img src="images/Polygon 30.svg" alt="">
+          </div>
+        </div>
+
+        <div class="minus3">
+        <img src="images/завод20.jpg" alt="">
+        </div>
+        <div class="minus3_text">
+          <p>Здесь айсберги переходят на&nbspфинальный этап. Они транспортируются на&nbspпоследний конвейер, ведущий в&nbspоткрытый океан, после чего цикл создания ледников считается завершённым.</p>
+          <div class="floors">
+            <img class="minus3_img" src="images/-3.png" alt="">
+            <h2>ЭТАЖ</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="building_4">
+      <div class="wrapper3">
+        <div class="minus4">
+          <img src="images/завод49.jpg" alt="">
+        </div>
+        <div class="minus4_title">
+          <div class="floors">
+            <img class="minus4_img" src="images/-4.png" alt="">
+            <h2>ЭТАЖ</h2>
+          </div>
+        </div>
+        <div class="minus4_text">
+          <p>На самой глубине располагается зона отдыха, где&nbspработники могут отдохнуть в&nbspспециально отведённых спальных отсеках.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="webposter">
+      <div class="wrapper2">
+
+        <div class="zavod">
+          <img class="zavod1" src="images/Group 126.svg" alt="">
+          <img class="zavod2" src="images/Group 126.svg" alt="">
+        </div>
+
+        <!-- <div class="footer">
+          <p>Антарктида, ул. Полярная, д. 3 <br> Ежедневно с 10:00 до 20:00</p>
+          <p>tel: + 7 (845) 97 56 34 <br> e-mail: hello@merzlota.com</p>
+        </div>
+         -->
+
+         <a class="webposter_title" href="https://mashazlydneva.github.io/constructure/">
+           <h2>ВЕБ-ПЛАКАТ КОНСТРУКТОР ЗАВОДА</h2>
+           <img src="images/Arrow 4.svg" alt="">
+         </a>
+      </div>
+    </section>
+
+  </body>
+</html>
