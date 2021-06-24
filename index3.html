@@ -6,18 +6,26 @@
     <title></title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="stylesheets/style.css">
-
     <script type="text/javascript">
+
+          $(document). ready(function(){
+            $(".burger").click(function(){
+               $(".menu_iphone").css("visibility", "visible")
+               $(".cross").css("display", "block")
+                $(".burger, .others, .uslugi").css("visibility", "hidden")
+             });
+
+             });
+    function PopUpShow(){
+      $("#popup1").show();
+    }
+    function PopUpHide(){
+      $("#popup1").hide();
+    }
 
       $(document).ready(function(){
         PopUpHide();
       });
-      function PopUpShow(){
-        $("#popup1").show();
-      }
-      function PopUpHide(){
-        $("#popup1").hide();
-      }
 
       </script>
     <style media="screen">
@@ -36,13 +44,13 @@
       display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 0em;
-        grid-auto-rows: minmax(7em, auto);
-        grid-template-rows: repeat(8, 7em);
+        /* grid-auto-rows: minmax(7em, auto);
+        grid-template-rows: repeat(8, 7em); */
      }
      .ice {
        grid-column: 1;
        grid-row: 2 / 7;
-       border: 1px solid black;
+       outline: 1px solid black;
        display: flex;
        flex-wrap: wrap;
        align-content: flex-start;
@@ -69,22 +77,6 @@
        background-color: #3A68EE;
      }
 
-     .footer {
-       grid-column: 1 / 3;
-       grid-row: 8;
-       border: 1px solid black;
-       display: flex;
-       justify-content: space-between;
-       padding: 0 2.6em;
-    }
-
-    .menu {
-      grid-column: 1 / 3;
-      grid-row: 1;
-      display: flex;
-      justify-content: space-around;
-      border: 1px solid black;
-    }
     .uslugi{
       color: #3A68EE;
     }
@@ -93,20 +85,31 @@
       width: 10.8em;
       height: 11.6em;
     }
+    .iceberg img:hover{
+      opacity: 0;
+    }
 
     .ice1, .ice2, .ice3, .ice4, .ice5, .ice6, .ice7, .ice8, .ice9, .ice10, .ice11, .ice12, .ice13, .ice14, .ice15 {
-      width: 11.05em;
-      height: 11.6em;
+      width: 11.09em;
+      height: 11.65em;
     }
 
     .ice1, .ice3, .ice5, .ice7 {
       background-color: black;
+      outline: 1px solid black;
     }
     .ice2, .ice6, .ice9, .ice12, .ice15 {
       background-color: #3A68EE;
+        outline: 1px solid black;
     }
     .ice4, .ice8, .ice10, .ice11, .ice13, .ice14 {
       outline: 1px solid black;
+    }
+    .ice2:hover, .ice6:hover, .ice9:hover, .ice12:hover, .ice15:hover, .ice1:hover, .ice3:hover, .ice5:hover, .ice7:hover {
+      opacity: 0;
+    }
+    .ice4:hover, .ice8:hover, .ice10:hover, .ice11:hover, .ice13:hover, .ice14:hover {
+      background-color: black;
     }
 
      .b-popup{
@@ -126,8 +129,15 @@
     width: 100%;
     /* background: url('images/Group 86.svg'); */
 }
-    </style>
+.burger, .cross {
+  display: none;
+}
 
+.menu_fixed h3 {
+  margin-left: 1em;
+}
+    </style>
+<link rel="stylesheet" href="stylesheets/responsive3.css">
   </head>
 
   <body>
@@ -166,13 +176,13 @@
           <img class="tr14" src="images/Polygon 30.svg" alt="">
           <img class="tr15" src="images/Polygon 26.svg" alt="">
       </div>
-      <div class="creation">
-        <h2><a href="javascript:PopUpShow()">СОЗДАНИЕ АЙСБЕРГОВ</a></h2>
-      </div>
+      <a class="creation" href="javascript:PopUpShow()">
+        <h2>СОЗДАНИЕ АЙСБЕРГОВ</h2>
+      </a>
 
-      <div class="delivery">
-          <h2><a href="javascript:PopUpShow()">ДОСТАВКА ЛЬДА</a></h2>
-      </div>
+      <a class="delivery" href="javascript:PopUpShow()">
+          <h2>ДОСТАВКА ЛЬДА</h2>
+      </a>
       <div class="b-popup" id="popup1">
           <a href="javascript:PopUpHide()"><img class="b-popup-content" src="images/Group 86.svg" alt=""></a>
       </div>
@@ -182,13 +192,40 @@
         <p>tel: + 7 (845) 97 56 34 <br> e-mail: hello@merzlota.com</p>
       </div>
 
-      <div class="menu">
-        <h3><a href="index2.html">О НАС</a></h3>
-        <h3><a href="">ПРОИЗВОДСТВО</a></h3>
+      <div class="menu_fixed">
+        <h3 class="others"><a href="index2.html">О НАС</a></h3>
+        <h3 class="others"><a href="index4.html">ПРОИЗВОДСТВО</a></h3>
         <h3 class="uslugi"><a href="index.html">УСЛУГИ</a></h3>
-        <h3><a href="">МАГАЗИН</a></h3>
-        <h3><a href="">МЕРОПРИЯТИЯ</a></h3>
+        <h3 class="others"><a href="index5.html">МАГАЗИН</a></h3>
+        <h3 class="others"><a href="index6.html">МЕРОПРИЯТИЯ</a></h3>
+
+        <a href="index3.html"><div class="cross">
+              <img src="images/Vector 22.svg" alt="">
+          </div></a>
+        <div class="burger">
+          <img src="images/Group 133.svg" alt="">
+        </div>
+
       </div>
+
+      <div class="menu_iphone">
+        <div class="rectangle1">
+          <h3 class="i_about"><a href="index2.html">О НАС</a></h3>
+        </div>
+        <div class="rectangle2">
+          <h3 class="i_creation"><a href="index4.html">ПРОИЗВОДСТВО</a></h3>
+        </div>
+        <div class="rectangle3">
+          <h3 class="i_uslugi"><a href="index3.html">УСЛУГИ</a></h3>
+        </div>
+        <div class="rectangle4">
+          <h3 class="i_shop"><a href="index5.html">МАГАЗИН</a></h3>
+        </div>
+        <div class="rectangle5">
+          <h3 class="i_news"><a href="index6.html">МЕРОПРИЯТИЯ</a></h3>
+        </div>
+      </div>
+
 
     </div>
 
