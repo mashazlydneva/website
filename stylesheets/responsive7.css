@@ -1,0 +1,46 @@
+@media all and (min-width: 320px) and (max-width: 1023px) {
+
+  p, h2 {
+    font-size: 2em;
+    padding-top: 0.3em;
+  }
+.wrapper2 {
+  grid-template-rows: repeat(17, 8em);
+}
+.opisanie {
+  grid-column: 1 / 13;
+  grid-row: 14 / 18;
+  padding: 4em 0em 0 21em;
+}
+
+.footer {
+  grid-row: 20;
+}
+.tovar {
+  grid-column: 1 / 13;
+  grid-row: 2 / 14;
+}
+.tovar img {
+  width: 100%;
+  margin: 0 0 0 0em;
+}
+.button {
+  height: 8em;
+  width: 70em;
+  margin: 2em 0 0 0em;
+}
+.price {
+  height: 8em;
+  width: 10em;
+}
+.button2 {
+  height: 8em;
+  width: 70em;
+  margin: -8.4em 0 0 0em;
+}
+.button p, .button2 h2, .button h2 {
+  padding-top: 0.3em;
+}
+
+
+}
