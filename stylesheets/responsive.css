@@ -207,13 +207,14 @@
     padding-top: 2em;
   }
   .burger {
-    margin-left: 70em;
+    margin-left: 97em;
   }
   .cross {
-    margin-left: 170em;
+    margin-left: 97em;
   }
   .menu_fixed {
     height: 14em;
+    display: block;
   }
 
 .menu_iphone {
